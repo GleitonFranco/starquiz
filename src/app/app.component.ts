@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { QuizService } from './services/quiz.service';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+  constructor(public quizservice: QuizService) {}
+
+  getFase() {
+  	return this.quizservice.getFase();
+  }
+
+  mudarFase() {
+  	this.quizservice.mudarFase();
+  }
 }

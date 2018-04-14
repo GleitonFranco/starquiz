@@ -1,0 +1,5 @@
+<mat-card class="grid-card">
+	<img [src]="entity.foto"/><br>
+	<button mat-raised-button (click)="info()" >?</button>
+	<button mat-raised-button [disabled]="this.entity.name_try" (click)="inputName()" >...</button>
+</mat-card>

@@ -1,0 +1,12 @@
+<div mat-dialog-content>
+  <p>{{data.score}} pontos</p>
+  <mat-form-field>
+    <input matInput placeholder="Nome" [(ngModel)]="data.name">
+  </mat-form-field>	
+  <mat-form-field>
+    <input matInput type="email" placeholder="E-mail" [(ngModel)]="data.email">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [disabled]="!data.name || !data.email" [mat-dialog-close]="data" cdkFocusInitial>Salvar</button>
+</div>

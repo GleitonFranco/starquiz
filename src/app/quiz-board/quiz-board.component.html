@@ -1,0 +1,12 @@
+<div class="grid-header mat-app-background" >
+	<img height="50" alt="StarQuiz Logo" src="https://png.icons8.com/color/1600/darth-vader.png">
+	<h1 class="mat-h1">Welcome to Star Quiz!</h1>
+	<p  class="mat-h2">{{ time.getMinutes() | number:'2.0' }} : {{ time.getSeconds() | number:'2.0' }}</p>
+</div>
+<div class="grid-container mat-app-background" >
+	<app-quiz-card (infoEv)="openDialog($event)" *ngFor="let card of getCards(), let i = index" [index]="i"></app-quiz-card>
+</div>
+<div class="mat-app-background">
+	<button mat-raised-button (click)="pgUp()">Seguinte</button>
+	<button mat-raised-button (click)="openFinalizadoDialog()">Finalizado</button>
+</div>
